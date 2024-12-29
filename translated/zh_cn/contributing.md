@@ -35,31 +35,31 @@ description: Fabric 文档贡献指南
 
 网站是开源的，在 GitHub 仓库中开发，意味着我们依赖 GitHub 工作流。
 
-1. [复刻 GitHub 仓库](https://github.com/FabricMC/fabric-docs/fork)
-2. 为你的复刻创建新分支
-3. 在那个分支上做出更改
-4. 在源仓库开拉取请求
+1. [Fork GitHub 仓库](https://github.com/FabricMC/fabric-docs/fork)
+2. 为你的Fork仓库创建新分支
+3. 在该分支上做出更改
+4. 在源仓库拉取请求（Pull Request）
 
-可以在[这里](https://docs.github.com/en/get-started/using-github/github-flow)了解更多关于 GitHub 流。
+可以在[这里](https://docs.github.com/en/get-started/using-github/github-flow)了解更多关于 GitHub 流的信息。
 
 可以在 GitHub 网站界面上做出更改，也可以本地开发和预览网站。
 
 #### <Badge type="tip">本地</Badge>克隆你的复刻{#clone-your-fork}
 
-如果想要本地克隆复刻，需要安装 [Git](https://git-scm.com/)。
+如果想要克隆到你的计算机上，需要先安装 [Git](https://git-scm.com/)。
 
-然后，用以下代码克隆仓库的复刻：
+然后，你可以在Git Bash中执行以下命令以克隆你的远程Fork仓库到本机：
 
 ```sh
-# make sure to replace "your-username" with your actual username
+# 请确保将“your-username”替换为你的Github用户名
 git clone https://github.com/your-username/fabric-docs.git
 ```
 
 #### <Badge type="tip">本地</Badge>安装依赖{#install-dependencies}
 
-**如果想要本地预览更改，需要安装 [Node.js 18+](https://nodejs.org/en/)**
+**如果想要预览本地更改，需要安装 [Node.js 18+](https://nodejs.org/en/)**
 
-然后，确保用以下代码安装所有依赖：
+然后，执行以下命令以安装所有依赖：
 
 ```sh
 npm install
@@ -67,17 +67,15 @@ npm install
 
 #### <Badge type="tip">本地</Badge>运行开发服务器{#run-the-development-server}
 
-这将允许您在本地地址 `localhost:3000` 预览您的更改，并自动在修改时重载页面。
+以下命令执行后，您可以通过本地IP `http://localhost:5173` 预览页面内容，并在你修改相应文件后自动重载页面。
 
 ```sh
 npm run dev
 ```
 
-现在可以从浏览器访问 `http://localhost:5173` 打开和浏览网站。
-
 #### <Badge type="tip">本地</Badge>构建网站{#building-the-website}
 
-这会把所有 Markdown 文件编译为静态 HTML 文件并保存至 `.vitepress/dist`：
+以下命令会把所有 Markdown 文件编译为静态 HTML 文件并保存至 `.vitepress/dist`：
 
 ```sh
 npm run build
@@ -85,7 +83,7 @@ npm run build
 
 #### <Badge type="tip">本地</Badge>预览构建的网站{#previewing-the-built-website}
 
-这将在端口 `4173` 启动本地服务器并展示 `.vitepress/dist` 中的网页：
+以下命令将在端口 `4173` 启动本地服务器并显示 `.vitepress/dist` 中的网页：
 
 ```sh
 npm run preview
@@ -93,11 +91,11 @@ npm run preview
 
 #### <Badge type="tip">本地</Badge>打开拉取请求{#opening-a-pull-request}
 
-对你的更改满意了，就可以 `推送（push）` 你的更改。
+当你改好内容后，就可以通过 `推送（push）` 来提交你的更改到远程仓库。
 
 ```sh
 git add .
-git commit -m "Description of your changes"
+git commit -m "你对本次更改的简单描述"
 git push
 ```
 
@@ -117,7 +115,7 @@ git push
 
 ### 4. 清理{#4-cleanup}
 
-这个阶段是文档团队会修正任何语法问题并在合并拉取请求之前进行他们认为必要的任何其他修改的时候！
+在这个阶段，文档团队会修正所有语法问题并进行任何其他的必要修改，最后合并拉取请求。
 
 ## 贡献网页框架{#contributing-framework}
 
